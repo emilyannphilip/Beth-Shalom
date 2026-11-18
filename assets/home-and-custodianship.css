@@ -131,3 +131,12 @@
 @media (min-width: 640px) { .leadership-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1100px) { .leadership-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (prefers-reduced-motion: reduce) { .leadership-card { transition: none; } }
+
+.home-amenity-icons .amenity-icon-devotional { color: #9a6908; }
+.home-amenity-icons .amenity-icon-theater { color: #6945a0; }
+.home-amenity-icons .amenity-icon-care { color: #087681; }
+.home-amenity-icons .amenity-icon-fitness { color: #387441; }
+.home-amenity-icons .material-symbols-outlined { transition: transform .18s ease; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .home-amenity-icons li:hover .material-symbols-outlined { transform: translateY(-2px); }
+}

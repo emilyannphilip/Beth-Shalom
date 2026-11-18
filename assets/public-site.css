@@ -158,3 +158,15 @@
 @media (prefers-reduced-motion: reduce) {
   .feature-card { transition: none; }
 }
+
+.site-footer-social a[aria-label="Facebook"] { color: #1877f2; background: #fff; }
+.site-footer-social a[aria-label="Instagram"] {
+  color: #fff;
+  background: radial-gradient(circle at 24% 106%, #ffdc80 0%, #fcaf45 18%, #d73469 44%, #9a2bb3 70%, #5033b2 100%);
+}
+.site-footer-social a[aria-label="Instagram"] svg { filter: drop-shadow(0 1px 1px #4b174b); }
+.site-footer-social a[aria-label="YouTube"] { color: #f00; background: #fff; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .site-footer-social a svg { transition: transform .18s ease; }
+  .site-footer-social a:hover svg { transform: scale(1.1); }
+}
