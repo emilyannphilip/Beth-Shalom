@@ -6,7 +6,7 @@
 }
 
 .home-living-spaces {
-  background: radial-gradient(ellipse at top left, #e6efdc, transparent 48%), #f6f8f2;
+  background: #e9f7f3;
 }
 
 .home-refresh-inner { width: min(100% - 2rem, 76rem); margin-inline: auto; }
@@ -98,7 +98,8 @@
   .home-amenity-icons { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
-.leadership-chart { padding-block: clamp(3rem, 6vw, 5rem); background: #edf5ec; }
+.leadership-chart { padding-block: clamp(3rem, 6vw, 5rem); background: #e9f7f3; }
+#governing-society { background-color: #effcf9; }
 .leadership-inner { width: min(100% - 2rem, 76rem); margin-inline: auto; }
 .leadership-inner > h2 { margin-bottom: 1.75rem; text-align: center; }
 .leadership-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
