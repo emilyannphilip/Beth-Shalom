@@ -1,0 +1,78 @@
+[data-page][hidden], #site-footer[hidden] { display: none !important; }
+
+.home-refresh {
+  padding-block: clamp(3rem, 6vw, 6rem);
+  color: #244136;
+}
+
+.home-living-spaces {
+  background: radial-gradient(ellipse at top left, #e6efdc, transparent 48%), #f6f8f2;
+}
+
+.home-refresh-inner { width: min(100% - 2rem, 76rem); margin-inline: auto; }
+.home-refresh-heading { max-width: 42rem; margin: 0 auto 2rem; text-align: center; }
+.home-refresh-heading p { margin-top: .6rem; }
+.home-refresh-grid { display: grid; gap: 1.15rem; }
+
+.home-room-tile {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+  background: #fcfdf9;
+  border: 1px solid #dce8d8;
+  border-radius: 1.35rem;
+  box-shadow: 0 5px 16px #173d2c0d;
+}
+.home-room-tile img { width: 100%; aspect-ratio: 2.15; object-fit: cover; display: block; }
+.home-room-copy { flex: 1; padding: 1.2rem; }
+.home-room-copy p { margin-top: .2rem; }
+.home-room-link { display: flex; align-items: center; gap: .45rem; min-height: 44px; align-self: flex-start; margin: 0 1.2rem .8rem; color: #205337; font-weight: 600; }
+.home-room-link:hover { text-decoration: underline; }
+
+.home-care { background: #fcfdf9; }
+.home-care-essentials { padding: clamp(1.25rem, 3vw, 2.5rem); border-radius: 1.5rem; background: #e8f0e4; }
+.home-care-item, .home-care-feature { min-width: 0; text-align: center; }
+.home-care-item { padding: .55rem; }
+.home-care-item h3, .home-care-feature h3 { margin: .55rem 0 .3rem; }
+.home-care-symbol, .custodian-placeholder {
+  display: inline-grid;
+  place-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 1rem;
+  background: #dceacb;
+  color: #285640;
+  font-size: 28px;
+}
+.home-care-features { margin-top: 1.15rem; }
+.home-care-feature {
+  padding: 1.4rem;
+  background: #f5f8f0;
+  border: 1px solid #e0eadd;
+  border-radius: 1.25rem;
+}
+.home-room-tile, .home-care-feature { transition: box-shadow .18s ease, border-color .18s ease; }
+.home-room-tile:hover, .home-care-feature:hover { border-color: #a8c1a7; box-shadow: 0 8px 22px #173d2c18; }
+.home-refresh-actions { display: flex; justify-content: center; margin-top: 1.75rem; }
+.home-refresh-action { display: inline-flex; align-items: center; gap: .55rem; min-height: 48px; padding: .55rem 1.25rem; border-radius: 2rem; color: #fff; background: #245039; font-weight: 600; transition: background .18s ease; }
+.home-refresh-action:hover { background: #173d2c; }
+.home-refresh a:focus-visible { outline: 2px solid #285640; outline-offset: 4px; }
+
+.feature-grid.custodian-grid.custodian-collection { max-width: none; }
+.custodian-placeholder { width: 64px; height: 64px; }
+.custodian-preview-grid { margin-top: 1.25rem; }
+
+@media (min-width: 620px) {
+  .home-refresh-grid, .feature-grid.custodian-grid.custodian-collection { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1000px) {
+  .home-rooms-grid, .home-care-essentials, .custodian-preview-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home-care-features { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .feature-grid.custodian-grid.custodian-collection { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+  .custodian-collection > article { grid-column: span 2; }
+  .custodian-collection > article:nth-child(5) { grid-column: 2 / span 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-refresh :is(.home-room-tile, .home-care-feature, .home-refresh-action) { transition: none; }
+}
